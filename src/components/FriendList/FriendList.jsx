@@ -9,7 +9,7 @@ export const FriendList = ({ friends }) => {
         <li key ={friend.id} classNane={css.item}>
   <span classNane={css.status}></span>
   <img classNane={css.avatar} src={friend.avatar} alt="User avatar" width="48" />
-          <p classNane={css.name}>{ friend.name}</p>
+          <p classNane={css.name}>{friend.name}</p>
 </li>))}
 
 </ul>
