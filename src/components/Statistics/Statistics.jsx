@@ -1,6 +1,8 @@
 import PropTypes from 'prop-types';
 import css from 'components/Statistics/Statistics.module.css';
 
+import { getRandomColor } from 'components/utils/getRandomColor';
+
 export const Statistics = ({ title, stats }) => {
   return (
     <section className={css.statistics}>
@@ -32,12 +34,3 @@ Statistics.propTypes = {
     }),
   ),
 };
-
-function getRandomColor() {
-  const letters = '0123456789ABCDEF';
-  let color = '#';
-  for (var i = 0; i < 6; i++) {
-    color += letters[Math.floor(Math.random() * 16)];
-  }
-  return color;
-}
