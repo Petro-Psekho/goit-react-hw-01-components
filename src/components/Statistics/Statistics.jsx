@@ -8,7 +8,12 @@ export const Statistics = ({ title, stats }) => {
 
       <ul className={css.statList}>
         {stats.map(stat => (
-          <li key={stat.id} className={css.item}>
+          <li
+            key={stat.id}
+            style={{
+              backgroundColor: getRandomColor(),
+            }}
+          >
             <span className={css.label}>{stat.label}</span>
             <span className={css.percentage}>{stat.percentage}</span>
           </li>
@@ -27,3 +32,12 @@ Statistics.propTypes = {
     }),
   ),
 };
+
+function getRandomColor() {
+  const letters = '0123456789ABCDEF';
+  let color = '#';
+  for (var i = 0; i < 6; i++) {
+    color += letters[Math.floor(Math.random() * 16)];
+  }
+  return color;
+}
