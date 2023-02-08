@@ -4,17 +4,17 @@ import css from 'components/FriendList/FriendList.module.css';
 
 export const FriendList = ({ friends }) => {
   return (
-    <ul classNane={css.friendList}>
+    <ul className={css.friendList}>
       {friends.map(({ id, avatar, name, isOnline }) => (
-        <li key={id} classNane={css.item}>
-          <span classNane={css.status}></span>
+        <li key={id} className={css.item}>
+          <span className={css.status}></span>
           <img
-            classNane={css.avatar}
+            className={css.avatar}
             src={avatar}
             alt="User avatar"
             width="48"
           />
-          <p classNane={css.name}>{name}</p>
+          <p className={css.name}>{name}</p>
         </li>
       ))}
     </ul>
