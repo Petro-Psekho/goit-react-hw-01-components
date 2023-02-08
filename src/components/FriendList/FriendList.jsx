@@ -1,4 +1,3 @@
-// import PropTypes from 'prop-types';
 import PropTypes from 'prop-types';
 import { networkStatus } from 'components/utils/networkStatus';
 import { colorStatus } from 'components/utils/colorStatus';
