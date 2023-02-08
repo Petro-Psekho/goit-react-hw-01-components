@@ -7,7 +7,14 @@ export const FriendList = ({ friends }) => {
     <ul className={css.friendList}>
       {friends.map(({ id, avatar, name, isOnline }) => (
         <li key={id} className={css.item}>
-          <span className={css.status}></span>
+          <span
+            className={css.status}
+            style={{
+              color: colorStatus(isOnline),
+            }}
+          >
+            {networkStatus(isOnline)}
+          </span>
           <img
             className={css.avatar}
             src={avatar}
@@ -30,4 +37,15 @@ FriendList.propTypes = {
       isOnline: PropTypes.bool.isRequired,
     })
   ),
+};
+
+export const colorStatus = isOnline => {
+  if (isOnline) {
+    return 'green';
+  }
+  return 'red';
+};
+
+export const networkStatus = isOnline => {
+  return isOnline ? 'online' : 'offline';
 };
