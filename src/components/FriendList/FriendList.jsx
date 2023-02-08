@@ -1,5 +1,7 @@
 // import PropTypes from 'prop-types';
 import PropTypes from 'prop-types';
+import { networkStatus } from 'components/utils/networkStatus';
+import { colorStatus } from 'components/utils/colorStatus';
 import css from 'components/FriendList/FriendList.module.css';
 
 export const FriendList = ({ friends }) => {
@@ -37,15 +39,4 @@ FriendList.propTypes = {
       isOnline: PropTypes.bool.isRequired,
     })
   ),
-};
-
-export const colorStatus = isOnline => {
-  if (isOnline) {
-    return 'green';
-  }
-  return 'red';
-};
-
-export const networkStatus = isOnline => {
-  return isOnline ? 'online' : 'offline';
 };
