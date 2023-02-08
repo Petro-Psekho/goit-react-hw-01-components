@@ -1,6 +1,6 @@
 export const colorStatus = isOnline => {
   if (isOnline) {
-    return 'green';
+    return '#00b627';
   }
   return 'red';
 };

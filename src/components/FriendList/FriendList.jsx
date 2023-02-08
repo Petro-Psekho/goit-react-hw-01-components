@@ -9,20 +9,22 @@ export const FriendList = ({ friends }) => {
     <ul className={css.friendList}>
       {friends.map(({ id, avatar, name, isOnline }) => (
         <li key={id} className={css.item}>
-          <span
-            className={css.status}
-            style={{
-              color: colorStatus(isOnline),
-            }}
-          >
-            {networkStatus(isOnline)}
-          </span>
-          <img
-            className={css.avatar}
-            src={avatar}
-            alt="User avatar"
-            width="48"
-          />
+          <div className={css.wrapper}>
+            <img
+              className={css.avatar}
+              src={avatar}
+              alt="User avatar"
+              width="48"
+            />
+            <span
+              className={css.status}
+              style={{
+                color: colorStatus(isOnline),
+              }}
+            >
+              {networkStatus(isOnline)}
+            </span>
+          </div>
           <p className={css.name}>{name}</p>
         </li>
       ))}
