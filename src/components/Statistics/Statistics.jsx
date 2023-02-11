@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { getRandomColor } from 'components/utils/getRandomColor';
+import { getRandomColor } from 'utils/getRandomColor';
 import css from 'components/Statistics/Statistics.module.css';
 
 export const Statistics = ({ title, stats }) => {
@@ -31,6 +31,6 @@ Statistics.propTypes = {
       id: PropTypes.string.isRequired,
       label: PropTypes.string.isRequired,
       percentage: PropTypes.number.isRequired,
-    }),
-  ),
+    }).isRequired
+  ).isRequired,
 };
